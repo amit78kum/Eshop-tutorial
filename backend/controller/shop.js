@@ -39,7 +39,7 @@ router.post("/create-shop", catchAsyncErrors(async (req, res, next) => {
 
     const activationToken = createActivationToken(seller);
 
-    const activationUrl = `https://eshop-tutorial-pyri.vercel.app/seller/activation/${activationToken}`;
+    const activationUrl = `http://localhost:3000/seller/activation/${activationToken}`;
 
     try {
       await sendMail({
@@ -62,7 +62,7 @@ router.post("/create-shop", catchAsyncErrors(async (req, res, next) => {
 // create activation token
 const createActivationToken = (seller) => {
   return jwt.sign(seller, process.env.ACTIVATION_SECRET, {
-    expiresIn: "5m",
+    expiresIn: "10d",
   });
 };
 

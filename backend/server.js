@@ -18,11 +18,14 @@ if (process.env.NODE_ENV !== "PRODUCTION") {
 // connect db
 connectDatabase();
 
-cloudinary.config({
-  cloud_name: process.env.CLOUDINARY_NAME,
-  api_key: process.env.CLOUDINARY_API_KEY,
-  api_secret: process.env.CLOUDINARY_API_SECRET
-})
+// 
+
+          
+cloudinary.config({ 
+  cloud_name: 'dzkmi9dag', 
+  api_key: '197921828366315', 
+  api_secret: 'GlgSEVFfjU3nDRO7MBf8hppiCQw' 
+});
 
 
 // create server
